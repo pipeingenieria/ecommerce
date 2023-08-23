@@ -1,0 +1,60 @@
+h2,
+h5,
+h1,
+a {
+    color: #B59763;
+    text-transform: uppercase;
+}
+
+p {
+    color: #B59763;
+}
+
+.invalid-feedback {
+    color: red !important;
+    margin-bottom: 1% !important;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+a {
+    cursor: pointer
+}
+
+.colorBlue {
+    color: rgb(57, 122, 241);
+}
+
+ul {
+    height: 100% !important;
+    width: 100% !important;
+    position: absolute;
+    display: none;
+    /*  background-color: white; */
+}
+
+.btn-width {
+    width: 100%;
+}
+
+h1.color {
+    color: #B59763 !important;
+}
+
+div.cont-button {
+    margin-left: 150px;
+}
+
+@media only screen and (max-width: 900px) {
+    div.cont-button {
+        margin: 0 auto;
+    }
+    div.child-button {
+        margin-top: 20px;
+    }
+    .btn-width {
+        width: 50%;
+    }
+}

@@ -1,0 +1,51 @@
+form {
+    width: 50%;
+    margin-top: 50px;
+    margin-left: 25%;
+}
+
+.borde {
+    border: 1px solid white;
+}
+
+.color {
+    color: #b59763 !important;
+}
+
+@media only screen and (max-width: 780px) {
+    .tamañoMin {
+        margin-bottom: 10% !important;
+    }
+    .tamañoMin>img {
+        width: 100%;
+    }
+    .cont-img {
+        width: 50%;
+    }
+    .contenedor {
+        width: 100%;
+        margin-right: 100px;
+    }
+    .formulario {
+        width: 80% !important;
+        margin-left: 11% !important;
+    }
+}
+
+.tamañoMin {
+    margin-bottom: 10% !important;
+}
+
+.tamañoMin>img {
+    width: 80%;
+}
+
+.cont-img {
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.contenedor {
+    width: 100%;
+    margin-right: 100px;
+}

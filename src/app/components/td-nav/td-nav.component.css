@@ -1,0 +1,30 @@
+#main-header {
+    left: 0;
+    /* Posicionamos la cabecera al lado izquierdo */
+    top: 0;
+    /* Posicionamos la cabecera pegada arriba */
+    /* Hacemos que la cabecera tenga una posición fija */
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.btn-carrito {
+    width: 100%;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.637);
+    color: white !important;
+}
+
+.btn-carrito:hover {
+    background-color: rgba(72, 187, 68, 0.89) !important;
+}
+
+.btn-carts {
+    background-color: rgba(204, 204, 204, 0.719);
+}
+
+.btn-carts:hover {
+    background-color: rgba(160, 160, 160, 0.637) !important;
+}

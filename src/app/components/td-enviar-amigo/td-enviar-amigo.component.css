@@ -1,0 +1,32 @@
+.anillo {
+    width: 80%;
+}
+
+.border {
+    border-bottom: dotted;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+div .border {
+    border-style: solid;
+    border-width: 1px;
+    color: white;
+}
+
+div .padding {
+    padding: 2%;
+}
+
+table,
+tr,
+td {
+    border: 1px solid white;
+}
+
+td {
+    color: #B59763 !important;
+}

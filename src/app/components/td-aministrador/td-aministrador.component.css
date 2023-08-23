@@ -1,0 +1,85 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 95%;
+    color: white;
+    margin-top: 50px;
+}
+
+td,
+th {
+    border: 1px solid #ffffff;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #000000;
+}
+
+.hover {
+    background-color: #000000;
+}
+
+form {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 50px;
+}
+
+div.contenedor {
+    width: 100%;
+}
+
+.paginator {
+    color: red;
+    background-color: rgb(255, 255, 255);
+    width: 95%;
+    margin-left: 27px;
+}
+
+
+/* @media only screen and (max-width: 700px) {
+    div.contenedor {
+        width: 100%;
+    }
+} */
+
+.color1 {
+    color: white !important;
+}
+
+.color {
+    color: #B59763 !important;
+}
+
+div.cont-button {
+    margin-left: 200px;
+}
+
+.btn-width {
+    width: 100%;
+}
+
+@media only screen and (max-width: 720px) {
+    form {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    div.cont-button {
+        margin: 0 auto;
+    }
+    div.child-button {
+        margin-top: 20px;
+    }
+    .btn-width {
+        width: 50%;
+    }
+}
+
+.scrooll {
+    overflow-y: scroll;
+}

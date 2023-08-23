@@ -1,0 +1,115 @@
+<!--Home Sections-->
+
+<section id="hello" class="home">
+    <div class="overlay"></div>
+    <div class="container col-6">
+        <div class="row">
+            <div class="main_home text-center">
+                <h1 class="color ancho" style="font-size: 4rem;">Contactanos</h1>
+            </div>
+        </div>
+        <!--End off row-->
+    </div>
+    <!--End off container -->
+    <br>
+</section>
+<!--End off Home Sections-->
+
+
+<!--Contact Us Section-->
+<section id="contact" class="contact fix">
+    <div class="container">
+        <div class="row">
+            <div class="main_contact p-top-100">
+
+                <div class="col-md-6 sm-m-top-30">
+                    <form class="row" [formGroup]="contactos" (ngSubmit)="onSubmit()">
+                        <h1 class="color text-left" style="margin-left: 2%;">Enviar un mensaje</h1>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Tus Nombres *</label>
+                                <input id="name" formControlName="name" required name="name" type="text" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+                            </div>
+                            <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                                <div *ngIf="f.name.errors.required">Recuerda dejarnos tus nombres !!!</div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Tu Email *</label>
+                                <input id="email" name="email" formControlName="email" type="text" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                            </div>
+                            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                <div *ngIf="f.email.errors.required">Recuerda dejarnos tu email !!!</div>
+                                <div *ngIf="f.email.errors.email">Debe ingresar un email valido EJ: example@example.com
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Teléfono *</label>
+                                <input id="telefono" formControlName="telefono" name="name" type="text" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.telefono.errors }">
+                            </div>
+                            <div *ngIf="submitted && f.telefono.errors" class="invalid-feedback">
+                                <div *ngIf="f.telefono.errors.required">Teléfono es Requerido!!!</div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Ciudad *</label>
+                                <input id="ciudad" name="ciudad" formControlName="ciudad" type="text" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.ciudad.errors }">
+                            </div>
+                            <div *ngIf="submitted && f.ciudad.errors" class="invalid-feedback">
+                                <div *ngIf="f.ciudad.errors.required">Ciudad es Requerido !!!</div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label>Tu Mensaje *</label>
+                                <textarea class="form-control" name="mensaje" id="mensaje" rows="6" formControlName="mensaje" [ngClass]="{ 'is-invalid': submitted && f.mensaje.errors }"></textarea>
+                            </div>
+                            <div *ngIf="submitted && f.mensaje.errors" class="invalid-feedback">
+                                <div *ngIf="f.mensaje.errors.required">Nos gustan los mensajes de nuestros clientes, nos dejas Uno ?</div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" (click)="enviar()" class="btn btn-default">Enviar Mensaje <i
+                                      class="fa fa-long-arrow-right"></i></button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="contact_img">
+                        <img src="assets/images/joya4.jpg" alt="" />
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!--End off row -->
+    </div>
+    <!--End off container -->
+</section>
+<!--End off Contact Section-->
+
+
+
+
+
+
+
+
+<!-- scroll up-->
+<div class="scrollup" (click)="scrollUp()">
+    <a (click)="scrollUp()"><i (click)="scrollUp()" class="fa fa-chevron-up"></i></a>
+</div>
+<!-- End off scroll up -->

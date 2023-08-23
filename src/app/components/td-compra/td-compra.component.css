@@ -1,0 +1,16 @@
+.anillo {
+    width: 80%;
+}
+
+.border {
+    border-bottom: dotted;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.color {
+    color: #B59763 !important;
+}

@@ -1,0 +1,53 @@
+<section id="gallery" class="gallery margen-global contact fix home">
+    <h1 class="color text-uppercase text-center">detalles de compra</h1>
+    <br>
+    <!-- Gallery container-->
+    <div class="container-fluid anillo ">
+        <div class="blog_saidbar sm-m-top-70 row" style="margin-bottom: 4%;">
+            <div class="col-md-6">
+                <div class="said_ctg fix">
+                    <img src="../../../assets/uploads/{{imagen}}">
+
+                </div>
+            </div>
+            <div class="said_ctg fix col-md-6">
+                <h6 class="color text-uppercase">Descripción: </h6>
+                <ul class="text-uppercase m-top-40">
+                    <li><a style="color: white;">Valor:  <span class="pull-right">$ {{precio}}</span></a></li>
+                    <li><a style="color: white;">Gramos:  <span class="pull-right">{{gramos}}</span></a></li>
+                    <li><a style="color: white;">Referencia:  <span class="pull-right">#{{referencia}}</span></a></li>
+                    <!-- <li><a href="">music <span class="pull-right">(29)</span></a></li>
+                  <li><a href="">graphics <span class="pull-right">(29)</span></a></li>
+                  <li><a href="">trend <span class="pull-right">(29)</span></a></li> -->
+                </ul>
+                <div>
+                    <p style="color: white;">{{descripcion}}</p>
+                </div>
+
+
+                <br>
+                <div class="mb-3" (click)="enviarAmigo(precio,nombre,imagen,descripcion,referencia)">
+                    <a class="cursor"><i class="far fa-envelope cursor"> &nbsp; </i>Enviar a un amigo</a>
+                    <p class="border" style="color: white "></p>
+                </div>
+                <br>
+                <form [formGroup]="compra">
+                    <strong class="text-uppercase" style="color: white ">Cantidad: </strong> &nbsp; &nbsp; <input id="cantidad" name="cantidad" formControlName="cantidad" type="number" min="0" max="100" value="1" style="background-color: black; color: white;">
+                    <br>
+                    <br>
+                    <button (click)="enviarNav()" type="submit" class="btn btn-default text-uppercase">Agregar al carrito <i class="fas fa-shopping-cart"></i></button>
+                </form>
+            </div>
+
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- scroll up-->
+<div class="scrollup" (click)="scrollUp()">
+    <a (click)="scrollUp()"><i (click)="scrollUp()" class="fa fa-chevron-up"></i></a>
+</div>
+<!-- End off scroll up -->

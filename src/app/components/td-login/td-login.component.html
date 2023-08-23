@@ -1,0 +1,37 @@
+<div class="col-md-12 col-sm-12 col-lg-12 col-xs-12 sm-m-top-30 margen-login container-fluid contenedor" style="margin-bottom: 20%;">
+    <div class=" boxShadow container backWidth">
+        <form class="row container-fluid text-center" [formGroup]="administrador" (ngSubmit)="onSubmit()">
+            <br>
+            <h1 class="color text-center mt-5">Login</h1>
+            <div class="row">
+                <div class="form-group col-md-12 col-sm-12 col-lg-12 col-xs-12">
+                    <label>Email *</label>
+                    <input id="email" formControlName="email" name="email" type="text" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                </div>
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <div *ngIf="f.email.errors.required">Email es requerido</div>
+                    <div *ngIf="f.email.errors.email">Debe ingresar un email valido EJ: example@example.com </div>
+                </div>
+            </div>
+
+            <div class="row ">
+                <div class="form-group col-md-12 col-sm-12 col-lg-12 col-xs-12">
+                    <label>Contraseña *</label>
+                    <input id="password" name="password" formControlName="password" type="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                    <!-- <a class="letterAlign" [routerLink]="['/home/resetPassword']">Restablecer contraseña ?</a> -->
+                </div>
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required">Contraseña Incorrecta</div>
+                </div>
+            </div>
+
+            <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12 my-3">
+                <div class="form-group">
+                    <button type="submit" (click)="admin()" class="btn btn-default">Ingresar 
+                            <i class="fa fa-long-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

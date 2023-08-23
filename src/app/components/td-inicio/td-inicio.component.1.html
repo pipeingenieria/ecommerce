@@ -1,0 +1,719 @@
+<section id="hello" class="home">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="main_home text-center">
+                <div class="home_text">
+                    <!-- <h4 class="text-white text-uppercase">Bienvenidos</h4> -->
+                    <h1 class="text-uppercase color">Joyería Tejido Dorado</h1>
+
+                    <div class="separator"></div>
+
+                    <h5 class=" text-uppercase text-white color"><em>nos caracteriza
+                      el trabajo hecho a mano.</em></h5>
+                </div>
+            </div>
+        </div>
+        <!--End off row-->
+    </div>
+    <!--End off container -->
+</section>
+<!--End off Home Sections-->
+
+
+<!--About Sections-->
+<section id="feature" class="feature p-top-50">
+    <h1 class="text-uppercase mb-4 color text-center">nuestro catalago</h1>
+    <div class="row cont-button" style="text-align: center; margin-top: 5%;">
+        <br>
+        <div class="col-lg-2 col-md-2 col-sm-12">
+            <button type="submit" (click)="tipoM('argollas')" class="btn btn-default text-uppercase">Argollas</button> &nbsp;
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 child-button">
+            <button type="submit" (click)="tipoM('pulseras')" class="btn btn-default text-uppercase">pulseras</button> &nbsp;
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 child-button">
+            <button type="submit" (click)="tipoM('collares')" class="btn btn-default text-uppercase">collares</button> &nbsp;
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 child-button">
+            <button type="submit" (click)="tipoM('aretes')" class="btn btn-default text-uppercase">aretes</button> &nbsp;
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 child-button">
+            <button type="submit" (click)="tipoM('dijes')" class="btn btn-default text-uppercase">Dijes</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div *ngIf="verAretes">Yo soy grooth</div>
+    <div *ngIf="verCollares">Batman</div>
+    <div *ngIf="verPulseras">Iron Man </div>
+    <div *ngIf="verDijes">Thor</div>
+    <div *ngIf="verArgollas">
+        <!--Our Work Section-->
+        <div class="container">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <div class="row">
+
+                <div class="main_work">
+
+                    <div class="col-md-7 col-md-offset-5 col-sm-12 col-xs-12" *ngFor="let argolla of argollas">
+
+                        <div class="work_item">
+                            <div class="row">
+
+                                <div class="col-md-7 col-sm-12 col-xs-12 text-right pull-right sm-text-center">
+                                    <div class="work_item_img">
+                                        <img src='assets/images/Argollas/{{argolla.imagen}}' alt="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-5 col-sm-12 col-xs-12 text-right pull-left sm-text-center">
+                                    <div class="work_item_details m-top-80 sm-m-top-20">
+                                        <h4 class="color">aretas</h4>
+                                        <div class="work_separator1"></div>
+                                        <p class="m-top-40 sm-m-top-10">Duis autem vel eum iriure dolor in hendrerit in vulputate velit molestie consequat</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End off work-item -->
+
+                    <div class="col-md-7 col-sm-12 col-xs-12">
+                        <div class="work_item">
+                            <div class="row">
+                                <div class="col-md-7 col-sm-12 col-xs-12">
+                                    <div class="work_item_img sm-text-center sm-m-top-40">
+                                        <img src="assets/images/DSC_0852.JPG" alt="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-5 col-sm-12 col-xs-12 text-left pull-left sm-text-center">
+                                    <div class="work_item_details m-top-80 sm-m-top-20">
+                                        <h4 class="color">anillo</h4>
+                                        <div class="work_separator2"></div>
+                                        <p class="m-top-40 sm-m-top-10">Duis autem vel eum iriure dolor in hendrerit in vulputate velit molestie consequat</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End off work-item -->
+
+                    <div class="col-md-7 col-md-offset-5 col-sm-12 col-xs-12">
+                        <div class="work_item">
+                            <div class="row">
+                                <div class="col-md-7 col-sm-12 col-xs-12 text-right pull-right sm-text-center">
+                                    <div class="work_item_img sm-m-top-40">
+                                        <img src="assets/images/DSC_0855.JPG" alt="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-5 col-sm-12 col-xs-12 text-right pull-left sm-text-center">
+                                    <div class="work_item_details m-top-80 sm-m-top-20">
+                                        <h4 class="color">anillo</h4>
+                                        <div class="work_separator1"></div>
+                                        <p class="m-top-40 sm-m-top-10">Duis autem vel eum iriure dolor in hendrerit in vulputate velit molestie consequat</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End off work-item -->
+
+                    <div class="col-md-7 col-sm-12 col-xs-12">
+                        <div class="work_item">
+                            <div class="row">
+                                <div class="col-md-7 col-sm-12 col-xs-12">
+                                    <div class="work_item_img sm-text-center sm-m-top-40">
+                                        <img src="assets/images/DSC_0150.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-5 col-sm-12 col-xs-12 text-left pull-left sm-text-center">
+                                    <div class="work_item_details m-top-80 sm-m-top-20">
+                                        <h4 class="color">anillo</h4>
+                                        <div class="work_separator2"></div>
+                                        <p class="m-top-40 sm-m-top-10">Duis autem vel eum iriure dolor in hendrerit in vulputate velit molestie consequat</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End off work-item -->
+
+
+
+
+
+                    <div class="col-md-7 col-md-offset-5 col-sm-12 col-xs-12">
+                        <div class="work_item">
+                            <div class="row">
+                                <div class="col-md-7 col-sm-12 col-xs-12 text-right pull-right sm-text-center">
+                                    <div class="work_item_img">
+                                        <img src="assets/images/joya10.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-5 col-sm-12 col-xs-12 text-right pull-left sm-text-center">
+                                    <div class="work_item_details m-top-80 sm-m-top-20">
+                                        <h4 class="color">aretas</h4>
+                                        <div class="work_separator1"></div>
+                                        <p class="m-top-40 sm-m-top-10">Duis autem vel eum iriure dolor in hendrerit in vulputate velit molestie consequat</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End off work-item -->
+
+                    <div class="col-md-7 col-sm-12 col-xs-12">
+                        <div class="work_item">
+                            <div class="row">
+                                <div class="col-md-7 col-sm-12 col-xs-12">
+                                    <div class="work_item_img sm-text-center sm-m-top-40">
+                                        <img src="assets/images/joya2.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-5 col-sm-12 col-xs-12 text-left pull-left sm-text-center">
+                                    <div class="work_item_details m-top-80 sm-m-top-20">
+                                        <h4 class="color">aretas</h4>
+                                        <div class="work_separator2"></div>
+                                        <p class="m-top-40 sm-m-top-10">Duis autem vel eum iriure dolor in hendrerit in vulputate velit molestie consequat</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End off work-item -->
+
+                    <div class="col-md-7 col-md-offset-5 col-sm-12 col-xs-12">
+                        <div class="work_item">
+                            <div class="row">
+                                <div class="col-md-7 col-sm-12 col-xs-12 text-right pull-right sm-text-center">
+                                    <div class="work_item_img">
+                                        <img src="assets/images/joya3.JPG" alt="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-5 col-sm-12 col-xs-12 text-right pull-left sm-text-center">
+                                    <div class="work_item_details m-top-80 sm-m-top-20">
+                                        <h4 class="color">argolla</h4>
+                                        <div class="work_separator1"></div>
+                                        <p class="m-top-40 sm-m-top-10">Duis autem vel eum iriure dolor in hendrerit in vulputate velit molestie consequat</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End off work-item -->
+
+                    <div class="col-md-7 col-sm-12 col-xs-12">
+                        <div class="work_item">
+                            <div class="row">
+                                <div class="col-md-7 col-sm-12 col-xs-12">
+                                    <div class="work_item_img sm-text-center sm-m-top-40">
+                                        <img src="assets/images/joya4.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-5 col-sm-12 col-xs-12 text-left pull-left sm-text-center">
+                                    <div class="work_item_details m-top-80 sm-m-top-20">
+                                        <h4 class="color">camandula</h4>
+                                        <div class="work_separator2"></div>
+                                        <p class="m-top-40 sm-m-top-10">Duis autem vel eum iriure dolor in hendrerit in vulputate velit molestie consequat</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End off work-item -->
+
+                    <div class="col-md-7 col-md-offset-5 col-sm-12 col-xs-12">
+                        <div class="work_item">
+                            <div class="row">
+                                <div class="col-md-7 col-sm-12 col-xs-12 text-right pull-right sm-text-center">
+                                    <div class="work_item_img">
+                                        <img src="assets/images/joya5.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-5 col-sm-12 col-xs-12 text-right pull-left sm-text-center">
+                                    <div class="work_item_details m-top-80 sm-m-top-20">
+                                        <h4 class="color">anillo</h4>
+                                        <div class="work_separator1"></div>
+                                        <p class="m-top-40 sm-m-top-10">Duis autem vel eum iriure dolor in hendrerit in vulputate velit molestie consequat</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End off work-item -->
+
+                    <div class="col-md-7 col-sm-12 col-xs-12">
+                        <div class="work_item">
+                            <div class="row">
+                                <div class="col-md-7 col-sm-12 col-xs-12">
+                                    <div class="work_item_img sm-text-center sm-m-top-40">
+                                        <img src="assets/images/joya6.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-5 col-sm-12 col-xs-12 text-left pull-left sm-text-center">
+                                    <div class="work_item_details m-top-80 sm-m-top-20">
+                                        <h4 class="color">argolla</h4>
+                                        <div class="work_separator2"></div>
+                                        <p class="m-top-40 sm-m-top-10">Duis autem vel eum iriure dolor in hendrerit in vulputate velit molestie consequat</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End off work-item -->
+
+                    <div class="col-md-7 col-md-offset-5 col-sm-12 col-xs-12">
+                        <div class="work_item">
+                            <div class="row">
+                                <div class="col-md-7 col-sm-12 col-xs-12 text-right pull-right sm-text-center">
+                                    <div class="work_item_img">
+                                        <img src="assets/images/joya7.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-5 col-sm-12 col-xs-12 text-right pull-left sm-text-center">
+                                    <div class="work_item_details m-top-80 sm-m-top-20">
+                                        <h4 class="color">anillo</h4>
+                                        <div class="work_separator1"></div>
+                                        <p class="m-top-40 sm-m-top-10">Duis autem vel eum iriure dolor in hendrerit in vulputate velit molestie consequat</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End off work-item -->
+
+                    <div class="col-md-7 col-sm-12 col-xs-12">
+                        <div class="work_item">
+                            <div class="row">
+                                <div class="col-md-7 col-sm-12 col-xs-12">
+                                    <div class="work_item_img sm-text-center sm-m-top-40">
+                                        <img src="assets/images/joya8.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-5 col-sm-12 col-xs-12 text-left pull-left sm-text-center">
+                                    <div class="work_item_details m-top-80 sm-m-top-20">
+                                        <h4 class="color">aretas</h4>
+                                        <div class="work_separator2"></div>
+                                        <p class="m-top-40 sm-m-top-10">Duis autem vel eum iriure dolor in hendrerit in vulputate velit molestie consequat</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End off work-item -->
+
+                    <div class="col-md-7 col-md-offset-5 col-sm-12 col-xs-12">
+                        <div class="work_item">
+                            <div class="row">
+                                <div class="col-md-7 col-sm-12 col-xs-12 text-right pull-right sm-text-center">
+                                    <div class="work_item_img">
+                                        <img src="assets/images/joya9.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-5 col-sm-12 col-xs-12 text-right pull-left sm-text-center">
+                                    <div class="work_item_details m-top-80 sm-m-top-20">
+                                        <h4 class="color">aretas</h4>
+                                        <div class="work_separator1"></div>
+                                        <p class="m-top-40 sm-m-top-10">Duis autem vel eum iriure dolor in hendrerit in vulputate velit molestie consequat</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End off work-item -->
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <div class="container">
+        <div class="row">
+            <div class="main_feature">
+
+                <div class="col-md-6 m-top-20">
+
+                    <!-- Head Title -->
+                    <div class="head_title">
+                        <h2 class="color">Producto Destacado</h2>
+                        <!--  <h5><em>Pouseidon brings the waves to somewhere so far,
+                                  with beautiful & elegant</em></h5> -->
+                        <div class="separator_left"></div>
+                    </div>
+                    <!-- End off Head Title -->
+
+                    <div class="feature_content wow fadeIn m-top-40">
+
+                        <h3 class="text-uppercase color"> JOYERIA TEJIDO DORADO</h3>
+                        <p> La técnica de la filigrana fue traída a Colombia por los joyeros españoles cuyos ayudantes nativos aprendieron el arte y lo transmitieron. La tradición de joyería de filigrana nace de la riqueza de nuestras tierras en oro y de
+                            su tradición minera. A lo largo de los interminables ríos y quebradas de las selvas inhóspitas, hombres y mujeres buscan agachados sobre su batea, este polvo amarillo que siempre ha maravillado al ser humano.</p>
+
+                        <p> La filigrana es una artesanía que se realiza con finísimos alambres de oro, que se consiguen después de estirar, torcer y aplanar el metal. </p>
+
+                        <div *ngIf="mostrarTexto">
+                            <p>
+                                Se derrite el oro traído en polvo por el minero. Después de enfriar, el material obtenido pasa por la laminadora y luego, por la "hilera". El joyero hala el hilo por agujeros siempre más diminuto, hasta volverlos apenas más grueso que un cabello.
+                            </p>
+
+                            <p>
+                                Se tuercen los alambres para formar una "trenza" que se va entretejiendo con la mano.
+                            </p>
+                            <p>
+                                La orfebrería artesanal, se sigue trabajando como se hacía en épocas pasadas de una manera totalmente artesanal, con herramientas de los siglos pasados, pero con la habilidad de joyeros que producen verdaderas obras de arte, únicas y siempre capaces de
+                                atrapar entre sus diminutos hilos de oro, todas las luces del mundo.
+                            </p>
+                            <br>
+                        </div>
+                        <a (click)="verTexto()" *ngIf="!mostrarTexto; else vermenos"> <u>Leer Mas...</u> </a>
+                        <ng-template #vermenos>
+                            <a (click)="verMenos()"> <u>Ver Menos...</u> </a>
+                        </ng-template>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="feature_photo wow fadeIn sm-m-top-40">
+                        <div class="photo_border"></div>
+                        <div class="feature_img">
+                            <img src="assets/images/DSC_0558copia.jpg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End off row-->
+    </div>
+    <!--End off container -->
+
+</section>
+<!--End off About section -->
+<hr>
+
+
+
+<!----------------------------------Models section------------------------------------------>
+
+<section id="models" class="models bg-grey roomy-80" style="background-color: black;">
+    <div class="container">
+        <div class="row">
+            <div class="main_models text-center">
+                <div class="col-md-12">
+                    <div class="head_title text-left sm-text-center wow fadeInDown">
+                        <h2>Galeria</h2>
+                        <h5><em>nuestros Modelos !</em></h5>
+                        <div class="separator_left"></div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="model_item m-top-30">
+                        <div class="model_img">
+                            <img [routerLink]="['/compra']" src="assets/images/joya1.jpg" alt="" style="width: 262px; height: 262px;" />
+                            <div class="model_caption">
+                                <!--  <h5 class="text-white">18 Gramos</h5> -->
+                                <a class="text-uppercase"> anillo ojo de sauro </a>
+                                <h5>$ 210.000</h5>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End off col-md-3 -->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="model_item m-top-30">
+                        <div class="model_img">
+                            <img src="assets/images/jgaleria1.jpg" alt="" style="width: 262px; height: 262px;" />
+                            <div class="model_caption">
+                                <a class="text-uppercase"> anillo ojo de sauro </a>
+                                <h5>$ 210.000</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End off col-md-3 -->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="model_item m-top-30">
+                        <div class="model_img">
+                            <img src="assets/images/jgaleria2.jpg" alt="" style="width: 262px; height: 262px;" />
+                            <div class="model_caption">
+                                <a class="text-uppercase"> anillo ojo de sauro </a>
+                                <h5>$ 210.000</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End off col-md-3 -->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="model_item m-top-30">
+                        <div class="model_img">
+                            <img src="assets/images/jgaleria3.jpg" alt="" style="width: 262px; height: 262px;" />
+                            <div class="model_caption">
+                                <a class="text-uppercase"> anillo ojo de sauro </a>
+                                <h5>$ 210.000</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End off col-md-3 -->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="model_item m-top-30">
+                        <div class="model_img">
+                            <img src="assets/images/jgaleria4.jpg" alt="" style="width: 262px; height: 262px;" />
+                            <div class="model_caption">
+                                <a class="text-uppercase"> anillo ojo de sauro </a>
+                                <h5>$ 210.000</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End off col-md-3 -->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="model_item m-top-30">
+                        <div class="model_img">
+                            <img src="assets/images/jgaleria5.jpg" alt="" style="width: 262px; height: 262px;" />
+                            <div class="model_caption">
+                                <a class="text-uppercase"> anillo ojo de sauro </a>
+                                <h5>$ 210.000</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End off col-md-3 -->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="model_item m-top-30">
+                        <div class="model_img">
+                            <img src="assets/images/jgaleria6.jpg" alt="" style="width: 262px; height: 262px;" />
+                            <div class="model_caption">
+                                <a class="text-uppercase"> anillo ojo de sauro </a>
+                                <h5>$ 210.000</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End off col-md-3 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="model_item m-top-30">
+                        <div class="model_img">
+                            <img src="assets/images/jgaleria7.jpg" alt="" style="width: 262px; height: 262px;" />
+                            <div class="model_caption">
+                                <a class="text-uppercase"> anillo ojo de sauro </a>
+                                <h5>$ 210.000</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div *ngIf="mostrar">
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="model_item m-top-30">
+                            <div class="model_img">
+                                <img src="assets/images/jgaleria8.jpg" alt="" style="width: 262px; height: 262px;" />
+                                <div class="model_caption">
+                                    <a class="text-uppercase"> anillo ojo de sauro </a>
+                                    <h5>$ 210.000</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End off col-md-3 -->
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="model_item m-top-30">
+                            <div class="model_img">
+                                <img src="assets/images/jgaleria9.jpg" alt="" style="width: 262px; height: 262px;" />
+                                <div class="model_caption">
+                                    <a class="text-uppercase"> anillo ojo de sauro </a>
+                                    <h5>$ 210.000</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End off col-md-3 -->
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="model_item m-top-30">
+                            <div class="model_img">
+                                <img src="assets/images/jgaleria10.jpg" alt="" style="width: 262px; height: 262px;" />
+                                <div class="model_caption">
+                                    <a class="text-uppercase"> anillo ojo de sauro </a>
+                                    <h5>$ 210.000</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End off col-md-3 -->
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="model_item m-top-30">
+                            <div class="model_img">
+                                <img src="assets/images/jgaleria11.jpg" alt="" style="width: 262px; height: 262px;" />
+                                <div class="model_caption">
+                                    <a class="text-uppercase"> anillo ojo de sauro </a>
+                                    <h5>$ 210.000</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End off col-md-3 -->
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="model_item m-top-30">
+                            <div class="model_img">
+                                <img src="assets/images/jgaleria12.jpg" alt="" style="width: 262px; height: 262px;" />
+                                <div class="model_caption">
+                                    <a class="text-uppercase"> anillo ojo de sauro </a>
+                                    <h5>$ 210.000</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End off col-md-3 -->
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="model_item m-top-30">
+                            <div class="model_img">
+                                <img src="assets/images/jgaleria13.jpg" alt="" style="width: 262px; height: 262px;" />
+                                <div class="model_caption">
+                                    <a class="text-uppercase"> anillo ojo de sauro </a>
+                                    <h5>$ 210.000</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End off col-md-3 -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="model_item m-top-30">
+                            <div class="model_img">
+                                <img src="assets/images/jgaleria14.jpg" alt="" style="width: 262px; height: 262px;" />
+                                <div class="model_caption">
+                                    <a class="text-uppercase"> anillo ojo de sauro </a>
+                                    <h5>$ 210.000</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="model_item m-top-30">
+                        <div class="model_img">
+                            <img src="assets/images/jgaleria15.jpg" alt="" style="width: 262px; height: 262px;" />
+                            <div class="model_caption">
+                                <a class="text-uppercase"> anillo ojo de sauro </a>
+                                <h5>$ 210.000</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End off col-md-3 -->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="model_item meet_team m-top-30">
+                        <a (click)="ver()" class="cursor">Ver mas <i class="fa fa-long-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- End off col-md-3 -->
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Contact Us Section-->
+<!--Home Sections-->
+
+
+
+<!--Contact Us Section-->
+<section id="contact" class="contact fix">
+    <div class="container">
+        <div class="row">
+            <div class="main_contact p-top-100">
+
+                <div class="col-md-6 sm-m-top-30">
+                    <form class="row" [formGroup]="contactos" (ngSubmit)="onSubmit()">
+                        <h1 class="text-left" style="margin-left: 2%;">Enviar un mensaje</h1>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Tus Nombres *</label>
+                                <input id="name" formControlName="name" required name="name" type="text" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+                            </div>
+                            <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                                <div *ngIf="f.name.errors.required">Recuerda dejarnos tus nombres !!!</div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Tu Email *</label>
+                                <input id="email" name="email" formControlName="email" type="text" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                            </div>
+                            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                <div *ngIf="f.email.errors.required">Recuerda dejarnos tu email !!!</div>
+                                <div *ngIf="f.email.errors.email">Debe ingresar un email valido EJ: example@example.com </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label>Tu Mensaje *</label>
+                                <textarea class="form-control" name="mensaje" id="mensaje" rows="6" formControlName="mensaje" [ngClass]="{ 'is-invalid': submitted && f.mensaje.errors }"></textarea>
+                            </div>
+                            <div *ngIf="submitted && f.mensaje.errors" class="invalid-feedback">
+                                <div *ngIf="f.mensaje.errors.required">Nos gustan los mensajes de nuestros clientes, nos dejas Uno ?</div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" (click)="enviar()" class="btn btn-default">Enviar Mensaje <i class="fa fa-long-arrow-right"></i></button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="contact_img">
+                        <img src="assets/images/joya4.jpg" alt="" />
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!--End off row -->
+    </div>
+    <!--End off container -->
+</section>
+<!--End off Contact Section-->
+
+
+
+
+
+<!-- scroll up-->
+<div class="scrollup">
+    <a (click)="scrollUp()"><i (click)="scrollUp()" class="fa fa-chevron-up"></i></a>
+</div>
+<!-- End off scroll up -->

@@ -1,0 +1,188 @@
+<div class="contenedor margen-global">
+    <h1 class="color text-uppercase mb-4 text-center">Administracción de productos</h1>
+    <div class="row cont-button" style="text-align: center; margin-top: 5%;">
+        <br>
+
+        <div class="col-lg-2 col-md-2 col-sm-12">
+            <button (click)="tipoM('argollas')" class="btn btn-default btn-width  text-uppercase">Argollas</button> &nbsp;
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-12 child-button">
+            <button type="submit" (click)="tipoM('pulseras')" class="btn btn-width  btn-default text-uppercase">pulseras</button> &nbsp;
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-12 child-button">
+            <button type="submit" (click)="tipoM('collares')" class="btn btn-default btn-width  text-uppercase">collares</button> &nbsp;
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-12 child-button">
+            <button type="submit" (click)="tipoM('aretes')" class="btn btn-default btn-width  text-uppercase">aretes</button> &nbsp;
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-12 child-button">
+            <button type="submit" (click)="tipoM('dijes')" class="btn btn-default btn-width  text-uppercase">Dijes</button>
+        </div>
+    </div>
+
+    <!-------------------------------------------------- Aretes ------------------------------------->
+    <div class="col-12 scrooll">
+        <h1 class="text-center">{{titulo}}</h1>
+        <table class="text-center scrooll" style="margin-left: 2%;">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Gramos</th>
+                    <th>Descripción</th>
+                    <th>Referencia</th>
+                    <th>Valor</th>
+                    <th>Foto</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let alldates of allDates | paginate: { itemsPerPage: 10, currentPage: p1, id: 'first' }">
+                    <td>{{alldates.nombre}}</td>
+                    <td>{{alldates.gramos}}</td>
+                    <td>{{alldates.descripcion}}</td>
+                    <td>{{alldates.referencia}}</td>
+                    <td>$ {{alldates.valor}}</td>
+                    <td>{{alldates.foto}}</td>
+                    <td>
+
+                        <div class="dropdown dropleft">
+                            <a class="btn btn-primary btn-sm hover" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-gear"></i>
+                            </a>
+
+                            <div style="background-color: black;" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a (click)="editar(alldates.referencia, alldates.tipoProducto)" class="color dropdown-item cursor text-uppercase"><i class="fa fa-edit"></i> Editar</a>
+                                <br>
+                                <a (click)="delete(alldates.referencia, alldates.tipoProducto)" class="color dropdown-item cursor  text-uppercase"><i class="fa fa-trash"></i>
+                                Eliminar</a>
+                            </div>
+                        </div>
+
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+        <div class="paginator">
+            <pagination-controls class="ml-3" [previousLabel]="labels.previousLabel" [nextLabel]="labels.nextLabel" (pageChange)="p1 = $event" id="first"></pagination-controls>
+        </div>
+    </div>
+    <div *ngIf="ocultarForm" class="sm-m-top-30 container-fluid contenedor">
+
+        <form class="row container-fluid text-center" [formGroup]="formProducto" (ngSubmit)="onSubmit()">
+            <h1 class="color text-center">Agregar/Editar</h1>
+
+            <div class="col-sm-12 col-md-12 col-lg-6">
+                <div class="form-group">
+                    <label>Nombre Producto *</label>
+                    <input id="nombre" formControlName="nombre" name="nombre" type="text" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.nombre.errors }">
+
+                </div>
+                <div *ngIf="submitted && f.nombre.errors" class="invalid-feedback">
+                    <div *ngIf="f.nombre.errors.required">Nombre es obligatorio</div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-lg-6 my-3">
+                <div class="form-group">
+                    <label>quilates *</label>
+                    <input id="gramos" name="gramos" formControlName="gramos" type="text" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.gramos.errors }">
+                </div>
+                <div *ngIf="submitted && f.gramos.errors" class="invalid-feedback">
+                    <div *ngIf="f.gramos.errors.required">quilates es obligatorio</div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-lg-6">
+                <div class="form-group">
+                    <label>Descripción *</label>
+                    <input id="descripcion" formControlName="descripcion" name="descripcion" type="text" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.descripcion.errors }">
+                </div>
+                <div *ngIf="submitted && f.descripcion.errors" class="invalid-feedback">
+                    <div *ngIf="f.descripcion.errors.required">Descripción es obligatorio</div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-lg-6 my-3">
+                <div class="form-group">
+                    <label>Referencia *</label>
+                    <input id="referencia" name="referencia" formControlName="referencia" type="text" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.referencia.errors }">
+                </div>
+                <div *ngIf="submitted && f.referencia.errors" class="invalid-feedback">
+                    <div *ngIf="f.referencia.errors.required">Referencia es obligatorio</div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-lg-6">
+                <div class="form-group">
+                    <label>Precio $ *</label>
+                    <input id="valor" formControlName="valor" name="valor" type="text" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.valor.errors }" #inputstring (keyup)="onKey($event,inputstring.value,'copiando')" (keydown.backspace)="onKeyDelete($event,inputstring.value)"
+                        onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                </div>
+                <div *ngIf="submitted && f.valor.errors" class="invalid-feedback">
+                    <div *ngIf="f.valor.errors.required">Precio es obligatorio</div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-lg-6 my-3">
+                <div class="form-group">
+                    <label>Foto Producto *</label>
+                    <input type="file" id="foto" name="photo" formControlName="foto" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.foto.errors }" />
+                    <!-- <input id="foto" name="foto" formControlName="foto" type="file" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.foto.errors }" (change)="cargandoImagen($event.target.files)"> -->
+                </div>
+                <div *ngIf="submitted && f.foto.errors" class="invalid-feedback">
+                    <div *ngIf="f.foto.errors.required">Foto es obligatorio</div>
+                </div>
+            </div>
+            <!-- </div> -->
+
+            <div class="col-sm-12 col-md-12 col-lg-6">
+                <div class="form-group">
+                    <input id="tipoP" type="text" formControlName="tipoP" name="tipoP" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.tipoP.errors }">
+                </div>
+                <!-- <div *ngIf="submitted && f.usuario.errors" class="invalid-feedback">
+                            <div *ngIf="f.usuario.errors.required">Error de Usuario</div>
+                        </div> -->
+            </div>
+
+            <div class="col-sm-12 my-3">
+                <div class="form-group">
+                    <button type="submit" (click)="enviar()" class="btn btn-default">Agregar/Editar <i
+              class="fa fa-long-arrow-right"></i></button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <input type="file" name="photo" ng2FileSelect [uploader]="uploader" />
+
+    <button type="button" class="btn btn-success btn-s" (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">
+        Upload an Image
+    </button>
+</div>
+
+<!-- scroll up-->
+<div class="scrollup" (click)="scrollUp()">
+    <a (click)="scrollUp()"><i (click)="scrollUp()" class="fa fa-chevron-up"></i></a>
+</div>
+<!-- End off scroll up -->

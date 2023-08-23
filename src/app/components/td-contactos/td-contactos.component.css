@@ -1,0 +1,14 @@
+.invalid-feedback {
+    color: red;
+    margin-bottom: 1%;
+}
+
+.color {
+    color: #B59763 !important;
+}
+
+@media only screen and (max-width: 650px) {
+    div.tamaño {
+        font-size: 0.5rem !important;
+    }
+}
